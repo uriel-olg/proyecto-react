@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react"
 import axios from "axios"
-import CriptoMoneda from "./cripto"
+import CriptoMoneda from "./Cripto"
 import "./App.css"
 
 
@@ -30,14 +30,15 @@ function App() {
     <div className="main-conteiner">
       <h1>Lista de cripto monedas</h1>
       <div className="cripto-conteiner">
-          {criptos.map(({nameid,name,price_usd}) =>(
-          <CriptoMoneda  key={nameid} nombre={name} precioUsd={price_usd}/>
+          {
+          criptos.map(({nameid,name,price_usd,symbol,percent_change_24h}) =>(
+          <CriptoMoneda  key={nameid} nombre={name} precioUsd={price_usd} codigo={symbol} variacion={percent_change_24h}/>
         ))}
       </div>
     </div>
       
     </>
 )
-}
+}    
 
-export default App
+export default App; 

@@ -1,6 +1,30 @@
 .cripto{
-    border-color: 12px solid black;
-    border-radius: 5px;
-    padding: 1rem;
-    box-shadow: whitesmoke .09px 5px 5px;
+    border-radius: 10px;
+    border: 1px solid skyblue;
+    border-left: 10px solid skyblue;
+}
+.cripto h2{
+    text-transform: uppercase;
+    margin-left: 10%;
+}
+
+.info{
+    margin-left: 10%
+}
+
+.label{
+    color: whitesmoke;
+    border-left: 50px;
+    margin-left: 5px;
+    color: skyblue;
+    text-transform: uppercase;
+}
+
+.positivo{
+    color: rgb(7, 255, 7);
+
+}
+
+.negativo{
+    color: rgb(255, 32, 32);
 }
