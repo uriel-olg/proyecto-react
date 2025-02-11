@@ -1,6 +1,6 @@
 import "./Cripto.css"
 import PropTypes from 'prop-types'
-
+import {Link} from "react-router-dom"
 const CriptoMoneda =({nombre,precioUsd,codigo,variacion})=>{
     return (
         <div className="cripto">
@@ -13,11 +13,12 @@ const CriptoMoneda =({nombre,precioUsd,codigo,variacion})=>{
                     <span className={parseFloat(variacion).toFixed(2) > 0 ?  "positivo" : "negativo"}>
                     {parseFloat(variacion).toFixed(2)}%
                     </span>
-                </p>    
+                </p>
+                <Link to={`criptomonedas`}>Ver detalles</Link>    
             </div>
         </div>              
     )
-    
+
 }
 
 CriptoMoneda.propTypes = {
