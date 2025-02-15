@@ -2,6 +2,7 @@
     border-radius: 10px;
     border: 1px solid skyblue;
     border-left: 10px solid skyblue;
+    padding-bottom: 3%;
 }
 .cripto h2{
     text-transform: uppercase;
@@ -27,4 +28,15 @@
 
 .negativo{
     color: rgb(255, 32, 32);
+}
+
+.link{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    
+}
+
+.link:hover{
+    color: skyblue;
+    
 }

@@ -4,11 +4,12 @@ const Home = ()=>{
 
     return (
         <>
-            <h1>Hola,bienbenido a HZmarket</h1>
+            <h1>bienvenido a HZ-market</h1>
             <p>Conoce las 100 criptos mas relevante del mercado</p>
-            <Link to="/criptomonedas">ver cripto</Link>
+            <Link to="/criptomonedas">ver criptomonedas</Link>
         </>
     )
 }
 
 export default Home;
+

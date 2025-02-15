@@ -9,7 +9,7 @@ function Cuadricula() {
 
   //const API_URL = import.meta.env.VITE_API_URL
 
-  const url = "https://api.coinlore.net/api/tickers/"
+  const url = "https://api.coincap.io/v2/assets/"
     const [criptos,setCriptos] = useState([])
     
     useEffect(()=>{
@@ -17,7 +17,6 @@ function Cuadricula() {
         .then((data)=>{
         console.log(data)
         setCriptos(data.data.data)
-        console.log(data.data)
         })
         .catch(()=>{
         console.error("algo ah fallado")
@@ -32,14 +31,13 @@ function Cuadricula() {
       <h1>Lista de cripto monedas</h1>
       <div className="cripto-conteiner">
           {
-          criptos.map(({nameid,name,price_usd,symbol,percent_change_24h}) =>(
-          <CriptoMoneda  
-          key={nameid} 
+          criptos.map(({id,name,priceUsd,symbol,changePercent24Hr}) =>(
+          <CriptoMoneda 
           nombre={name}
-          precioUsd={price_usd} 
+          precioUsd={priceUsd} 
           codigo={symbol} 
-          variacion={percent_change_24h}
-          id={nameid}
+          variacion={changePercent24Hr}
+          id={id}
           />
         ))}
       </div>
