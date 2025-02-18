@@ -16,20 +16,14 @@ const CriptoPag = ()=>{
     })
     
     useEffect(()=>{
-        axios.get("api.coincap.io/v2/assets/bitcoin")
+        axios.get(`${url}${params.id}`)
         .then(respuesta=>{
-            const criptoData = respuesta.data.data.find(c => c.id === params.id)
-            console.log(respuesta)
-            if(criptoData){
-            setCripto({
-                name:criptoData.data.name,
-                price:criptoData.data.priceUsd,
-                symbol:criptoData.data.symbol})
-            }
-            
+            setCripto(
+                {name:respuesta.data.data}
+            )
         })
-        .catch(()=>{
-            console.log("Error, algo ha ocurrido")
+        .catch((e)=>{
+            console.log(e)
         })
     },[params.id])
 
@@ -40,6 +34,7 @@ const CriptoPag = ()=>{
             <span>{cripto.name}</span>
             <span>{cripto.price}</span>
             <span>{cripto.symbol}</span>
+            
         </div>
         </>
     )

@@ -1,4 +1,4 @@
-import React from "react";
+
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "./componentes/App";
@@ -23,7 +23,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route index element={<Cuadricula />}/>
             <Route path=":id" element={<CriptoPag/>}></Route>
         </Route>
-
         <Route path="*" element={<Pag404 />} />
       </Routes>
     </BrowserRouter>

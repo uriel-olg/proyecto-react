@@ -2,7 +2,7 @@ import { useState,useEffect } from "react"
 import axios from "axios"
 import CriptoMoneda from "./Cripto/Cripto"
 import "./Cuadricula.css"
-import Menu from "./Menu/Menu"
+
 
 
 function Cuadricula() {
@@ -33,6 +33,7 @@ function Cuadricula() {
           {
           criptos.map(({id,name,priceUsd,symbol,changePercent24Hr}) =>(
           <CriptoMoneda 
+          key={id}
           nombre={name}
           precioUsd={priceUsd} 
           codigo={symbol} 
