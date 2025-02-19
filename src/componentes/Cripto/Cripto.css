@@ -3,22 +3,27 @@
     border: 1px solid skyblue;
     border-left: 10px solid skyblue;
     padding-bottom: 3%;
+    padding: 15px;
+    text-align: left;
 }
 .cripto h2{
     text-transform: uppercase;
     margin-left: 10%;
+    margin-bottom: 3px;
 }
 
 .info{
-    margin-left: 10%
+    margin-left: 10% 
+    
 }
 
 .label{
+    
     color: whitesmoke;
     border-left: 50px;
-    margin-left: 5px;
     color: skyblue;
     text-transform: uppercase;
+    
 }
 
 .positivo{
@@ -33,10 +38,10 @@
 .link{
     color: rgb(255, 255, 255);
     text-decoration: none;
-    
+    margin-top: 20px;
 }
 
 .link:hover{
-    color: skyblue;
+    border-bottom: 2px solid white;
     
 }

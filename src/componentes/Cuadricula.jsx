@@ -23,12 +23,12 @@ function Cuadricula() {
         })
     },[])
     
-    if(criptos.length ===0) return <span>Cargando...</span>
+    if(criptos.length ===0) return <span className="cargando">Cargando...</span>
     
   return(
     <>
     <div className="main-conteiner">
-      <h1>Lista de cripto monedas</h1>
+      <h1 className="titulo">Lista de CriptoMonedas</h1>
       <div className="cripto-conteiner">
           {
           criptos.map(({id,name,priceUsd,symbol,changePercent24Hr}) =>(

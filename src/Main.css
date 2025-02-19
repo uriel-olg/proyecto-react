@@ -1,5 +1,15 @@
-html{
+
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
     color: white;
+  }
+
+  body {
     font-family: sans-serif;
-    background:linear-gradient(#011e27,#144b4c);
-}
+    background: rgb(0,15,22);
+    background: linear-gradient(180deg, #173737 0%, #183238 60.42%, #183638 100%);
+    min-height: 98vh;
+  }

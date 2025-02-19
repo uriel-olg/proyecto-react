@@ -8,12 +8,8 @@ import Cuadricula from "./componentes/Cuadricula";
 import Home from "./Home"
 import CriptoPag from "./componentes/Cripto/CriptoPag";
 
-
-
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>

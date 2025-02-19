@@ -1,7 +1,31 @@
-.main-menu a{
-    color: white;
+.main-menu{
+    border-bottom: solid 2px rgba(255, 255, 255, 0.708);
+    padding: 10px;
+    width: 95%;
+    margin: auto;
+    
 }
 
 .main-menu a{
+    color: white;
     text-decoration: none;
+}
+
+.ul{
+    list-style: none;
+    width: 20%;
+    padding: 0%;
+}
+
+li{
+    display: inline-block;
+    padding-right:10px;
+}
+.menu:hover {
+    border-bottom: 2px solid white;
+}
+
+.foto{
+    width: 25px;
+    margin-left: 5px;
 }

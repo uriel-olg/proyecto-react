@@ -3,9 +3,10 @@ import {NavLink} from "react-router-dom"
 const Menu = ()=>{
     return (
         <nav className="main-menu">
-            <ul>
-                <li><NavLink to="/">Inicio</NavLink></li>
-                <li><NavLink to="./criptomonedas">criptomonedas</NavLink></li>
+            <ul className="ul">
+                <li><NavLink to="/" className="menu">Inicio</NavLink></li>
+                <li><NavLink to="./criptomonedas" className="menu">CriptoMonedas</NavLink></li>
+                <li><img src="./src/componentes/Menu/btc.png" className="foto"/></li>
             </ul>
         </nav>
     )
