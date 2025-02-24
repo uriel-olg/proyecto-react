@@ -1,85 +1,78 @@
 import {useParams} from "react-router-dom"
-import axios from "axios"
-import { useEffect, useState } from "react"
 import "./CriptoPage.css"
+import usePetition from "../../hooks/usePetition"
 
 
 const CriptoPag = ()=>{ 
-    const url ="https://api.coincap.io/v2/assets/"
-    const params = useParams();
-    
 
-    const [cripto,setCripto] = useState({
-        name:"",
-        price:0,
-        symbol:""
-    })
-
-    const [history,setHistorys] = useState([])
-    
-    useEffect(()=>{
-        axios.get(`${url}${params.id}`)
-        .then(respuesta=>{
-            setCripto(
-                {name:respuesta.data.data.name,
-                price:respuesta.data.data.priceUsd,
-                symbol:respuesta.data.data.symbol}
-            )
-        })
-        .catch((e)=>{
-            console.log(e)
-        })
-    },[params.id])
-    
-    useEffect(()=>{
-        axios.get(`${url}${params.id}/history?interval=d1`)
-        .then(respuesta=>{
-            setHistorys(respuesta.data.data)
-        })
-        .catch((e)=>{
-            console.log(e)
-        })
-    },[params.id])
-
+    const params= useParams()
+    const cripto = usePetition(`${params.id}`)
+    const history = usePetition(`${params.id}/history?interval=d1`)
 
     return (
         <>
-        <h1 className="titulo">Soy la CriptoMoneda {params.id}</h1>
+        
         <div>
-            <ul>
-                <li>{cripto.name}</li>
-                <li>{cripto.price}</li>
-                <li>{cripto.symbol}</li>
-            </ul>
+            {
+                cripto && (
+                    <>
+                    <span className="rank">ranking: {cripto.rank}</span>
+                    <h1 className="titulo">{params.id}</h1>
+                    <span className="symbol">{cripto.symbol}</span>
+                    <div className="info ">
+                        <span>RANK </span>
+                        <br />
+                        <span>NOMBRE {cripto.name}</span>
+                        <br />
+                        <span>PRECIO </span>
+                        <br />
+                        <span>SIMBOLO </span>
+                        <br />
+                        <span>VARIACION 24HS </span>
+                        <br />
+                    </div>
+                    
+                    </>
+                    
+                )
+            }
+
             <span className="historial">history</span>
             <br />
-            
             <br />
-            <table>
-                <thead>
-                   <tr>
-                    <th>Fecha</th>
-                    <th>Precio</th>
-                </tr> 
-                </thead>
-                <tbody>
-                    {
-                        history.map(({date,priceUsd,time})=>{
-                            return(
-                                <tr key={time}>
-                                <td>{date}</td>
-                                <td>{parseFloat(priceUsd).toFixed(2)}</td>
-                            </tr>
-                            )
-                            
-                        })
-                    }
-                    
-                </tbody>
-            </table>
+
+            <div className="history">
+            {
+                history && (
+                    <table>
+                    <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Precio</th>
+                    </tr> 
+                    </thead>
+                    <tbody>
+                        {
+                            history.map(({date,priceUsd,time})=>{
+                                return(
+                                    <tr key={time}>
+                                    <td>{date}</td>
+                                    <td>{parseFloat(priceUsd).toFixed(2)}</td>
+                                </tr>
+                                )
+                                
+                            })
+                        }
+                        
+                    </tbody>
+                </table>
+                )
+            }
+            </div>
+            
         </div>
-        </>
-    )
+    </>
+)    
 }
 
 export default CriptoPag;
