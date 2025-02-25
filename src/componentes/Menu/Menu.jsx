@@ -5,7 +5,7 @@ const Menu = ()=>{
         <nav className="main-menu">
             <ul className="ul">
                 <li><NavLink to="/" className="menu">Inicio</NavLink></li>
-                <li><NavLink to="./criptomonedas" className="menu">CriptoMonedas</NavLink></li>
+                <li><NavLink to="/criptomonedas" className="menu">CriptoMonedas</NavLink></li>
                 <li><img src="./src/componentes/Menu/btc.png" className="foto"/></li>
             </ul>
         </nav>
