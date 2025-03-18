@@ -1,0 +1,46 @@
+
+.info{
+    
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    height: 60%;
+}
+
+.main-info{
+    font-size: 100%;
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    
+}
+
+
+.details{
+    font-size: 100%;
+    align-items: center;
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .details,.main-info{
+    font-size: 75%;
+}
+}
+
+/* Para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    details,.main-info{
+        font-size:90%;
+    }
+}
+
+/* Para pantallas grandes como desktops */
+@media (min-width: 1025px) {
+    .details,.main-info{
+        font-size: 100%;
+    }
+}

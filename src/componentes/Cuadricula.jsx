@@ -9,7 +9,7 @@ function Cuadricula() {
 
   //const API_URL = import.meta.env.VITE_API_URL
 
-  const url = "https://api.coincap.io/v2/assets/"
+    const url = "https://api.coincap.io/v2/assets/"
     const [criptos,setCriptos] = useState([])
     
     useEffect(()=>{

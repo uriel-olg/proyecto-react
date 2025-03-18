@@ -1,11 +1,11 @@
-
+import "./CriptoHistorial.css"
 
 const CriptoHistory = ({ history }) => {
   return (
     <div className="history">
       <table>
         <thead>
-          <tr>
+          <tr className="fijos">
             <th>Fecha</th>
             <th>Precio</th>
           </tr>
@@ -13,8 +13,8 @@ const CriptoHistory = ({ history }) => {
         <tbody>
           {history.map(({date, priceUsd, time}) => (
             <tr key={time}>
-              <td className="label">{new Date(date).toDateString()}</td>
-              <td className="price">{parseFloat(priceUsd, 3)}</td>
+              <td className="label-history">{new Date(date).toDateString()}</td>
+              <td className="price-history">{parseFloat(priceUsd).toFixed(3)}</td>
             </tr>
           ))}
         </tbody>

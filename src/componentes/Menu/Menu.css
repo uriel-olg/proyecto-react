@@ -1,9 +1,8 @@
 .main-menu{
     border-bottom: solid 2px rgba(255, 255, 255, 0.708);
     padding: 10px;
-    width: 95%;
+    width: 80%;
     margin: auto;
-    
 }
 
 .main-menu a{
@@ -11,16 +10,15 @@
     text-decoration: none;
 }
 
-.ul{
+ul {
+    display: flex;
+    gap: 20px; /* Espacio entre elementos */
     list-style: none;
-    width: 20%;
-    padding: 0%;
+    padding: 0;
+    margin: 0;
 }
 
-li{
-    display: inline-block;
-    padding-right:10px;
-}
+
 .menu:hover {
     border-bottom: 2px solid white;
 }

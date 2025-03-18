@@ -4,8 +4,8 @@ import {Link} from "react-router-dom"
 const CriptoMoneda =({id,nombre,precioUsd,codigo,variacion})=>{
     return (
         <div className="cripto">
-            <div className="info">
-                <h2>{nombre}</h2>
+            <div className="cripto-info">
+                <h1 className="nombre">{nombre}</h1>
                 <p><span className="label">Precio: </span>{parseFloat(precioUsd).toFixed(2)}</p>
                 <p><span className="label">Codigo: </span>{codigo}</p>
                 <p>
@@ -18,7 +18,7 @@ const CriptoMoneda =({id,nombre,precioUsd,codigo,variacion})=>{
                 <div>
                         
                 </div>   
-            </div>
+            </div>      
         </div>              
     )
 

@@ -1,8 +1,6 @@
 import {Outlet} from "react-router-dom"
 import Menu from "./Menu/Menu"
 
-
-
 const App = ()=>{
     return (
         <>

@@ -1,12 +1,16 @@
-.cripto-page-container {
+.Cripto-page-container {
+  box-sizing: border-box;
   display: grid;
-  grid-template-columns: 480px 1fr;
-  gap: 2rem;
-  position: relative;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  margin: auto;
+  margin-top:100px;
+  gap: 30px;
 }
 
 .cripto-page-container .info {
   position: fixed;
+  margin: 0px;
 }
 
 .cripto-page-container .history {

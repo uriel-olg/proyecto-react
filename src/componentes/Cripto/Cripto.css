@@ -5,16 +5,17 @@
     padding-bottom: 3%;
     padding: 15px;
     text-align: left;
+    
 }
 .cripto h2{
-  
     text-transform: uppercase;
     margin-left: 10%;
     margin-bottom: 3px;
 }
 
-.info{
-    margin-left: 10% 
+.cripto-info{
+   margin: 0;
+   text-align: left;
     
 }
 
@@ -45,4 +46,8 @@
 .link:hover{
     border-bottom: 2px solid skyblue;
     
+}
+
+.nombre{
+    margin: 0;
 }
