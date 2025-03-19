@@ -1,5 +1,6 @@
 import { createContext } from "react";
 import { useState,useEffect } from "react";
+
 const UserContext = createContext()
 
 const UserContextProvider = ({children})=>{
@@ -8,7 +9,7 @@ const UserContextProvider = ({children})=>{
 
     useEffect(()=>{
         setUsuario({
-        name:"beto quiroga",
+        name:"uriel olguin",
         registered: "15/agosto/2022",
         })
     },[])
@@ -22,4 +23,4 @@ const UserContextProvider = ({children})=>{
     )
 }
 
-export default {UserContext,UserContextProvider};
+export {UserContext,UserContextProvider};

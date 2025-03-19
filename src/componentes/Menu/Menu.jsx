@@ -1,9 +1,8 @@
-
 import { useContext } from "react"
-import "./context/UserContext"
 import "./Menu.css"
 import {NavLink} from "react-router-dom"
-import UserContext from "../context/UserContext"
+import { UserContext } from "../../context/UserContext"
+
 
 
 const Menu = () => {
