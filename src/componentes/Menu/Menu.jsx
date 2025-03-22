@@ -15,6 +15,10 @@ const Menu = () => {
                 <li><NavLink to="/" className="menu">Inicio</NavLink></li>
                 <li><NavLink to="/criptomonedas" className="menu">CriptoMonedas</NavLink></li>
                 <li><NavLink to="/perfil" className="menu">Perfil de {usuario.name}</NavLink></li>
+                <li><a onClick={()=>{
+                    localStorage.removeItem("tokenEdMarket")
+                    navigation("/login")
+                }} className="menu"></a>Cerrar sesion</li>
             </ul>
         </nav>
     )
