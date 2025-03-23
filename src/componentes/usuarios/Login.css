@@ -51,3 +51,12 @@ input[name=password],[name=email]{
 input:focus {
     outline: none; /* Elimina el borde predeterminado */
   }
+
+.error{
+    margin-bottom: 5px;
+    color: rgb(255, 255, 255);
+    background-color: red;
+    border-radius: 3px;
+    padding: 5px;
+    
+}

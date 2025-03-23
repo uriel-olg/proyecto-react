@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import "./Menu.css"
-import {NavLink} from "react-router-dom"
+import {useNavigate,NavLink} from "react-router-dom"
 import { UserContext } from "../../context/UserContext"
 
 
@@ -8,6 +8,7 @@ import { UserContext } from "../../context/UserContext"
 const Menu = () => {
 
     const usuario = useContext(UserContext)
+    const navigation = useNavigate()
 
     return (
         <nav className="main-menu">
@@ -18,7 +19,7 @@ const Menu = () => {
                 <li><a onClick={()=>{
                     localStorage.removeItem("tokenEdMarket")
                     navigation("/login")
-                }} className="menu"></a>Cerrar sesion</li>
+                }} className="menu">Cerrar sesion</a></li>
             </ul>
         </nav>
     )
