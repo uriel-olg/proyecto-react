@@ -9,7 +9,7 @@ const CriptoPag = ()=>{
     const [cripto,cargandoCripto] = usePetition(`${params.id}`)
     const [history,cargandoHistory] = usePetition(`${params.id}/history?interval=d1`)
     
-    if(cargandoCripto || cargandoHistory) return <span> Cargando... </span>
+    while(cargandoCripto || cargandoHistory) return <span className="cargando"> Cargando... </span>
     
     return (
     <div className="Cripto-page-container">

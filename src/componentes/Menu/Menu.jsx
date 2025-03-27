@@ -12,7 +12,7 @@ const Menu = () => {
 
     return (
         <nav className="main-menu">
-            <ul className="ul">
+            <ul className="ul-menu">
                 <li><NavLink to="/" className="menu">Inicio</NavLink></li>
                 <li><NavLink to="/criptomonedas" className="menu">CriptoMonedas</NavLink></li>
                 <li><NavLink to="/perfil" className="menu">Perfil de {usuario.name}</NavLink></li>

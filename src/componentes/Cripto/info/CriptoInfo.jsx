@@ -5,7 +5,7 @@ const CriptoInfo = ({ cripto }) => {
     <div className="info">
       <div className="main-info">
         <span>Ranking: {cripto.rank}</span>
-        <h1>{cripto.name}</h1>
+        <h1 className="titulo-m">{cripto.name}</h1>
         <span className="symbol">{cripto.symbol}</span>
       </div>
 

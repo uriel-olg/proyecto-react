@@ -27,8 +27,11 @@
 }
 
 .cargando{
+
+    display: flex;
+    margin-top: 30px;
     text-align: center;
-    margin: auto
+    font-size: 30px;
 }
 
 .cargando{

@@ -23,7 +23,7 @@ function Cuadricula() {
         })
     },[])
     
-    if(criptos.length ===0) return <span className="cargando">Cargando...</span>
+    while(criptos.length ===0) return <span className="cargando">Cargando...</span>
     
   return(
     <>

@@ -4,18 +4,23 @@
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 10px;
-    height: 60%;
+    height: 80%;
 }
 
-.main-info{
-    font-size: 100%;
-    text-align: left;
+.main-info{  
+    display: flex;
+    flex-direction: column;
+    text-align: start;
     margin-left: 20px;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
+.titulo-m{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
 
 .details{
     font-size: 100%;
@@ -23,6 +28,12 @@
     text-align: left;
     margin-left: 20px;
     margin-bottom: 10px;
+    text-decoration: none;
+    list-style: n;
+}
+
+.detail{
+    list-style-type: none;
 }
 
 @media (max-width: 768px) {
