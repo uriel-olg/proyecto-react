@@ -9,7 +9,7 @@ import Home from "./Home"
 import CriptoPag from "./componentes/Cripto/CriptoPag";
 import Perfil from "./componentes/usuarios/Perfil";
 import { UserContextProvider } from "./context/UserContext";
-import Login from "./componentes/usuarios/login";
+import Login from "./componentes/usuarios/Login";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
