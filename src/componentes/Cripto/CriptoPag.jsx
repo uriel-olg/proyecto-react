@@ -6,13 +6,13 @@ import CriptoHistory from "./historial/CriptotHistorial"
 
 const CriptoPag = ()=>{ 
     const params= useParams()
-    const [cripto,cargandoCripto] = usePetition(`${params.id}`)
-    const [history,cargandoHistory] = usePetition(`${params.id}/history?interval=d1`)
+    const [cripto,cargandoCripto] = usePetition(`/${params.id}`)
+    const [history,cargandoHistory] = usePetition(`/${params.id}/history?interval=d1`)
     
     while(cargandoCripto || cargandoHistory) return <span className="cargando"> Cargando... </span>
     
     return (
-    <div className="Cripto-page-container">
+    <div className="Cripto-page-container"> 
         {cripto && <CriptoInfo cripto={cripto}/>}
         { history && <CriptoHistory history={history}/>}
     </div>

@@ -2,8 +2,8 @@ import { useState,useEffect } from "react";
 import axios from "axios";
 
 const usePetition = (endpoint)=>{
-    const url ="https://api.coincap.io/v2/assets/"
-
+    const url ="https://rest.coincap.io/v3/assets"
+    const key ="ce6fb0bc1b8981c011a1ec036dddc1907ae5474c6c6d44850f87dd46b1e170dd"
     const [data,setData] = useState()
     const [cargando,setCargando] = useState(false)
     const [error,setError] = useState()
@@ -11,7 +11,11 @@ const usePetition = (endpoint)=>{
     useEffect(()=>{
         setCargando(true)
 
-        axios.get(`${url}${endpoint}`)
+        axios.get(`${url}${endpoint}`,{
+            headers: {
+            "Authorization": `Bearer ${key}`
+        }
+        })
         .then(respuesta=>{
             setData(respuesta.data.data)
 

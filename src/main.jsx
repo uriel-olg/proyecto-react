@@ -8,12 +8,11 @@ import Cuadricula from "./componentes/Cuadricula";
 import Home from "./Home"
 import CriptoPag from "./componentes/Cripto/CriptoPag";
 import Perfil from "./componentes/usuarios/Perfil";
-import { UserContextProvider } from "./context/UserContext";
-import Login from "./componentes/usuarios/Login";
+//import { UserContextProvider } from "./context/UserContext";
+//import Login from "./componentes/usuarios/Login";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <UserContextProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
@@ -24,11 +23,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route index element={<Cuadricula />}/>
             <Route path=":id" element={<CriptoPag/>}></Route>
         </Route>
-        <Route path="/login" element={<Login />} />
+
         <Route path="*" element={<Pag404 />} />
       </Routes>
     </BrowserRouter>
-  </UserContextProvider>
+
   
   
 );

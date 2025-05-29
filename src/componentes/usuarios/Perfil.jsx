@@ -1,11 +1,13 @@
 
-import { useContext } from "react";
 import "./Perfil.css"
-import { UserContext } from "../../context/UserContext";
+
 
 const Perfil = ()=>{
 
-    const usuario = useContext(UserContext)
+    const usuario = {
+        name:"alex",
+        email:"alex@gmail.com",
+    }
     return (
         <div className="main-perfil">
             <h1>{usuario.name} {usuario.lastName}</h1>
@@ -17,7 +19,8 @@ const Perfil = ()=>{
                         <span className="mayus"> 2027</span>
                     </li>
                     <li className="li">foto de perfil 
-                        <a href="https://reqres.in/img/faces/9-image.jpg" className="mayus"> click</a></li>
+                        
+                        </li>
                 </ul>
         </div>
     )

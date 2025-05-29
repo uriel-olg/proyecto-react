@@ -6,10 +6,11 @@ import "./Cuadricula.css"
 
 
 function Cuadricula() {
+ // https://rest.coincap.io/v3/assets?apiKey=ce6fb0bc1b8981c011a1ec036dddc1907ae5474c6c6d44850f87dd46b1e170dd
 
   //const API_URL = import.meta.env.VITE_API_URL
-
-    const url = "https://api.coincap.io/v2/assets/"
+    //const key = "ce6fb0bc1b8981c011a1ec036dddc1907ae5474c6c6d44850f87dd46b1e170dd"
+    const url = "https://rest.coincap.io/v3/assets?apiKey=ce6fb0bc1b8981c011a1ec036dddc1907ae5474c6c6d44850f87dd46b1e170dd"
     const [criptos,setCriptos] = useState([])
     
     useEffect(()=>{
@@ -18,8 +19,8 @@ function Cuadricula() {
         console.log(data)
         setCriptos(data.data.data)
         })
-        .catch(()=>{
-        console.error("algo ah fallado")
+        .catch((e)=>{
+        console.error("algo ah fallado",e)
         })
     },[])
     

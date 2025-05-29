@@ -6,3 +6,5 @@ proyecto creado con vite,utilizando react,axios,api CoinCap para pedir informaci
 para poder entrar debe usarse el usuario y la contraseña:
     "email": "eve.holt@reqres.in",
     "password": "cityslicka"
+
+*actualmente la api de login pide una key,no se puede hacer el login en esta version *

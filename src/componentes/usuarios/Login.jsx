@@ -14,12 +14,17 @@ const Login = ()=>{
 
     const [cargando,setCargando] = useState(false)
     const [error,setError] =useState()
+    //  const apiKey = "reqres-free-v1"
 
     const submit= (e) =>{
         setError(null)
         e.preventDefault()
         setCargando(true)
-        axios.post("https://reqres.in/api/login", user)
+        axios.post("https://reqres.in/api/login", user,{
+            headers:{
+                "Authorization" : "clave x-api: reqres-free-v1"
+            }
+        })
         .then((data) => {
             setCargando(false)
             console.log("Token recibido:", data.data.token); // ¿Se imprime el token aquí?
