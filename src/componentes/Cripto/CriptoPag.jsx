@@ -10,11 +10,11 @@ const CriptoPag = ()=>{
     const [history,cargandoHistory] = usePetition(`/${params.id}/history?interval=d1`)
     
     while(cargandoCripto || cargandoHistory) return <span className="cargando"> Cargando... </span>
-    
+
     return (
     <div className="Cripto-page-container"> 
         {cripto && <CriptoInfo cripto={cripto}/>}
-        { history && <CriptoHistory history={history}/>}
+        { history && <CriptoHistory history={history.reverse()}/>}
     </div>
 )    
 }

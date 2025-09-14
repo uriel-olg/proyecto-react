@@ -1,10 +1,11 @@
 .Cripto-page-container {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 80%;
+  width: 85%;
   margin: auto;
-  margin-top:100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 5%;
   gap: 30px;
 }
 
