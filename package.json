@@ -1,33 +1,40 @@
 {
-  "name": "apis-react",
+  "name": "criptos-all",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^1.7.9",
-    "prop-types": "^15.8.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^7.1.5",
-    "react-router-native": "^6.28.2"
+    "@tailwindcss/vite": "^4.1.18",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.13.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.17.0",
-    "@types/react": "^18.3.17",
-    "@types/react-dom": "^18.3.5",
-    "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.17.0",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.16",
-    "globals": "^15.13.0",
-    "vite": "^6.0.3"
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react-swc": "^4.2.2",
+    "autoprefixer": "^10.4.24",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.48.0",
+    "vite": "^7.3.1"
   },
-  "packageManager": "yarn@4.5.3+sha512.3003a14012e2987072d244c720506549c1aab73ee728208f1b2580a9fd67b92d61ba6b08fe93f6dce68fd771e3af1e59a0afa28dd242dd0940d73b95fedd4e90"
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
