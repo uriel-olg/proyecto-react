@@ -14,6 +14,7 @@ export const Home = () => {
         window.addEventListener("resize", handleResize)
         return () => window.removeEventListener("resize", handleResize)
     }, [])
+    
 
     return (
         <div className="h-screen bg-gradient-to-br from-[#0a0f2d] to-[#05122e] text-white">

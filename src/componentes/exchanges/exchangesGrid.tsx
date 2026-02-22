@@ -4,7 +4,7 @@ import { Load } from "../cargando/load"
 import { Nav } from "../nav/nav"
 
 
-const URL = "https://rest.coincap.io/v3/exchanges"
+const URL = "https://api.coincap.io/v2/exchanges"
 
 
 type Exchange = {
