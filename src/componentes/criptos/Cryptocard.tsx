@@ -36,7 +36,7 @@ export default function CryptoCard({ id,rank,name, symbol, price, change,price24
       </div>
 
       {/* Precio */}
-      <p className="text-white text-2xl font-semibold">`Precio : $ {Number(price).toFixed(2)}`</p>
+      <p className="text-white text-2xl font-semibold">Precio : $ {Number(price).toFixed(2)}</p>
 
       {/* Variación */}
       <p className={`mt-2 font-medium ${
