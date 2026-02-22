@@ -1,3 +1,0 @@
-
-
-const criptos = fetch("")

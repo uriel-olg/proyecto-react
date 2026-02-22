@@ -3,19 +3,24 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import { Home } from './componentes/home/home'
 import { Criptos } from './componentes/criptos/criptos'
-import { Noticias } from './componentes/noticias/noticias'
+import { CryptoProvider } from './componentes/context/contextCryptos'
+import CryptoDetails from './componentes/criptos/cryptoDetails'
+import { ExchangeGrid } from './componentes/exchanges/exchangesGrid'
+
+
 function App() {
-
-
   return (
     <>
-      <BrowserRouter>
+      <CryptoProvider>
+        <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home></Home>}/>
-          <Route path='/criptos' element={<Criptos></Criptos>}/>
-          <Route path="/noticias" element={<Noticias></Noticias>}/>
+          <Route path='/cryptos' element={<Criptos></Criptos>}/>
+          <Route path="/exchanges" element={<ExchangeGrid></ExchangeGrid>}/>
+          <Route path='/crypto/:id' element={<CryptoDetails></CryptoDetails>}/>
         </Routes>
-      </BrowserRouter>
+        </BrowserRouter>
+      </CryptoProvider>
     </>
   )   
 }
