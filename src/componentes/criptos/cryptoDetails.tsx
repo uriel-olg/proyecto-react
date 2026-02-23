@@ -28,8 +28,7 @@ export default function CryptoDetails() {
     useEffect(() => {
         async function getHistory() {
             const res = await fetch(
-                `https://rest.coincap.io/v3/assets/${id}/history?interval=h1
-`
+                `https://rest.coincap.io/v3/assets/${id}/history?interval=h1&apiKey=ce6fb0bc1b8981c011a1ec036dddc1907ae5474c6c6d44850f87dd46b1e170dd`
             );
             const data = await res.json();
 
