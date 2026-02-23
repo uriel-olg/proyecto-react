@@ -3,8 +3,7 @@ import { Link } from "react-router-dom"
 import { Load } from "../cargando/load"
 import { Nav } from "../nav/nav"
 
-const key = "ce6fb0bc1b8981c011a1ec036dddc1907ae5474c6c6d44850f87dd46b1e170dd"
-const URL = `https://rest.coincap.io/v3/exchanges?key=${key}`
+const URL = "https://rest.coincap.io/v3/exchanges?key=ce6fb0bc1b8981c011a1ec036dddc1907ae5474c6c6d44850f87dd46b1e170dd"
 
 
 type Exchange = {
