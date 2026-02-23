@@ -32,7 +32,7 @@ export const CryptoProvider = ({ children } : {children:ReactNode}) => {
             const data = await getData();
             console.log("API:", data);
             
-            setCrypto(data.data); // asegurate que tu API tiene "data"
+            setCrypto(data); // asegurate que tu API tiene "data"
         } catch (error) {
             console.log(error);
         }

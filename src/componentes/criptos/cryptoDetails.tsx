@@ -55,7 +55,7 @@ export default function CryptoDetails() {
     const logo = `https://assets.coincap.io/assets/icons/${item.symbol.toLowerCase()}@2x.png`;
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-[#0a0f2d] to-[#05122e] text-white p-6 animate-fadeIn">
+        <div className="min-h-screen bg-gradient-to-br from-[#0a0f2d] to-[#05122e] text-white p-6 animate-fadeIn  items-center">
 
     <Link
         to="/cryptos"
@@ -65,7 +65,7 @@ export default function CryptoDetails() {
     </Link>
 
     {/* GRID PRINCIPAL */}
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 pt-25">
 
         {/* ──────────────────────────────
             COLUMNA 1 — Icono y título

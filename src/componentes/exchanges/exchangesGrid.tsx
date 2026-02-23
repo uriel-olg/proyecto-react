@@ -3,8 +3,8 @@ import { Link } from "react-router-dom"
 import { Load } from "../cargando/load"
 import { Nav } from "../nav/nav"
 
-
-const URL = "https://api.coincap.io/v2/exchanges"
+const key = "ce6fb0bc1b8981c011a1ec036dddc1907ae5474c6c6d44850f87dd46b1e170dd"
+const URL = `https://rest.coincap.io/v3/exchanges?key=${key}`
 
 
 type Exchange = {
@@ -28,7 +28,7 @@ export const ExchangeGrid = () => {
         const json = await res.json()
         setExchanges(json.data)
         console.log(json)
-        
+        return (json.data)
         } catch (e) {
         console.log("error:", e)
         }
