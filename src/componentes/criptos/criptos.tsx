@@ -28,7 +28,7 @@ export const Criptos = () =>{
                         symbol={moneda.symbol}
                         image={`https://assets.coincap.io/assets/icons/${moneda.symbol.toLowerCase()}@2x.png`}
                         price={moneda.priceUsd}
-                        change={Number(moneda.changePercent24Hr) > 0}
+                        change={moneda.changePercent24Hr}
                         price24={moneda.changePercent24Hr}
                     />
                 ))}

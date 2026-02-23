@@ -7,7 +7,7 @@ export type props ={
   symbol:string,
   image:string,
   price:number,
-  change:boolean,
+  change:number,
   price24:number
 }
 
@@ -40,9 +40,9 @@ export default function CryptoCard({ id,rank,name, symbol, price, change,price24
 
       {/* Variación */}
       <p className={`mt-2 font-medium ${
-        change >= false ? "text-green-400" : "text-red-400"
+        change > 0 ? "text-green-400" : "text-red-400"
       }`}>
-        {change >= true ? "▲" : "▼"} {change} {Number(price24).toFixed(2)}%
+        {change > 0 ? "▲" : "▼"} {Number(price24).toFixed(2)}%
       </p>
 
       <button className="text-gray-300 hover:text-white cursor-pointer" onClick={() => navigate(`/crypto/${id}`)}>
