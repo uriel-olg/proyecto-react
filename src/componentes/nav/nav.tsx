@@ -29,8 +29,8 @@ export const Nav = () =>{
 
     return(
         <nav className="flex justify-between items-center px-8 py-5">
-            <h2 className="text-xl font-semibold">CryptoLive</h2> 
-            <ul className="flex gap-6 text-gray-300">
+            <h2 className="min-text-l text-xl font-semibold">CryptoLive</h2> 
+            <ul className="flex gap-6 text-gray-300 text-l">
                 <li className="hover:text-white cursor-pointer">
                     <button onClick={handleInicio}>Inicio</button>
                 </li>

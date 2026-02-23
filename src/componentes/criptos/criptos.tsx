@@ -18,7 +18,7 @@ export const Criptos = () =>{
     return (
         <>
             <Nav></Nav>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 p-10 gap-10 mt-10">
+            <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 p-10 gap-10 mt-10">
                 {crypto.map((moneda:Crypto) => (
                     <CryptoCard
                         key={moneda.id}

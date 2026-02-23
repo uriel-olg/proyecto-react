@@ -52,7 +52,7 @@ export default function CryptoDetails() {
         );
 
     const logo = `https://assets.coincap.io/assets/icons/${item.symbol.toLowerCase()}@2x.png`;
-
+        
     return (
         <div className="min-h-screen bg-gradient-to-br from-[#0a0f2d] to-[#05122e] text-white p-6 animate-fadeIn  items-center">
 
@@ -106,7 +106,7 @@ export default function CryptoDetails() {
         {/* ──────────────────────────────
             COLUMNA 3 — Datos principales (mini grid)
         ─────────────────────────────── */}
-        <div className="grid grid-cols-2 gap-4 bg-gradient-to-br from-[#0a0f2d] to-[#11183d]  p-6 rounded-xl shadow">
+        <div className="grid grid-cols-2 gap-4 bg-gradient-to-br from-[#0a0f2d] to-[#11183d]  p-6 rounded-xl shadow wrap-anywhere">
 
             <InfoBox title="Market Cap">
                 ${Number(item.marketCapUsd).toFixed(1)}

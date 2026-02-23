@@ -52,7 +52,7 @@ export const ExchangeGrid = () => {
         className="text-gray-300 hover:text-white transition  inline-block p-6"> 
         ← Volver </Link>
         
-        <div className="min-h-screen pb-10 pl-10 pr-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-white ">
+        <div className="min-h-screen pb-10 pl-10 pr-10 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-8 text-white ">
 
         {exchanges.map((ex) => (
             <div
