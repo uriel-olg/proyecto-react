@@ -1,5 +1,5 @@
 
-const url = "https://rest.coincap.io/v3/assets?apiKey=ce6fb0bc1b8981c011a1ec036dddc1907ae5474c6c6d44850f87dd46b1e170dd"
+const url = `https://rest.coincap.io/v3/assets?apiKey=${import.meta.env.VITE_COINCAP_KEY}`
 
 export const getData = async ()=> {
 
