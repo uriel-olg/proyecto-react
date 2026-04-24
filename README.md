@@ -1,73 +1,100 @@
-# React + TypeScript + Vite
+# Cripto Live
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación de seguimiento de criptomonedas en tiempo real. Explorá precios, variaciones y datos de mercado de los principales activos digitales, con historial de precios por hora en gráficos interactivos.
 
-Currently, two official plugins are available:
+🔗 **Demo en vivo:** [criptos-data.vercel.app](https://criptos-data.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Capturas
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+> (agregá 2-3 screenshots acá — podés usar la extensión "GoFullPage" en Chrome para capturar la pantalla completa)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Funcionalidades
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Listado de criptomonedas con precio actual, variación 24h y capitalización de mercado
+- Detalle de cada activo con gráfico de precio histórico (últimas 24 horas, intervalo horario)
+- Grilla de exchanges con datos de mercado
+- Indicador de variación con color dinámico (verde/rojo según suba o baja)
+- Navegación entre pantallas con React Router
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Stack tecnológico
+
+| Tecnología | Uso |
+|---|---|
+| React 18 + TypeScript | UI y tipado estático |
+| Vite | Bundler y entorno de desarrollo |
+| Tailwind CSS | Estilos utilitarios |
+| Recharts | Gráfico de precio histórico |
+| React Router v6 | Navegación y rutas dinámicas |
+| Context API | Estado global de criptomonedas |
+| CoinCap API v3 | Datos de precios en tiempo real |
+
+---
+
+## Cómo correrlo localmente
+
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/uriel-olg/proyecto-react.git
+cd proyecto-react
+
+# 2. Instalar dependencias
+pnpm install
+
+# 3. Crear el archivo de variables de entorno
+cp .env.example .env
+# Editá .env y agregá tu API key de CoinCap (coincap.io)
+
+# 4. Correr en modo desarrollo
+pnpm dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Variables de entorno
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Creá un archivo `.env` en la raíz con el siguiente contenido:
+VITE_COINCAP_KEY=tu_api_key_acá
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Podés obtener una API key gratuita en [coincap.io](https://coincap.io).
+
+---
+
+## Estructura del proyecto
+src/
+├── componentes/
+│   ├── context/        # Context API — estado global de cryptos
+│   ├── criptos/        # Listado y detalle de cada crypto
+│   ├── exchanges/      # Grilla de exchanges
+│   ├── home/           # Pantalla principal
+│   └── nav/            # Navegación
+├── App.tsx             # Rutas principales
+└── main.tsx
+
+---
+
+## Qué aprendí construyendo esto
+
+- Cómo estructurar el estado global con **Context API** y exponerlo mediante un hook custom para evitar el uso directo de `useContext` en cada componente
+- Integrar **Recharts** con datos de una API externa, formateando timestamps a horas legibles en el eje X
+- Manejar **rutas dinámicas** con React Router para la página de detalle de cada activo (`/crypto/:id`)
+- La importancia de las **variables de entorno** para no exponer API keys en el repositorio
+- Cómo tipar correctamente respuestas de APIs externas con **TypeScript interfaces**
+
+---
+
+## Próximas mejoras
+
+- [ ] Agregar skeleton loaders mientras cargan los datos
+- [ ] Manejo de errores visible para el usuario cuando falla la API
+- [ ] Buscador y filtros en el listado principal
+- [ ] Modo oscuro / claro
+
+---
+
+## Autor
+
+**Uriel** — [GitHub](https://github.com/uriel-olg)
