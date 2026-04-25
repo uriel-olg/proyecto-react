@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect, type ReactNode } from "react";
-import { getData } from "../peticiones";
+import { getData } from "../peticiones.tsx";
 
 export interface Crypto {
     id: string;

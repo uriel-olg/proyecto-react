@@ -5,7 +5,6 @@ export type props ={
   rank:number,
   name:string,
   symbol:string,
-  image:string,
   price:number,
   change:number,
   price24:number

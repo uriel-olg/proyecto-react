@@ -1,47 +1,41 @@
-import { useNavigate, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-
-    
-
-
-export const Nav = () =>{
-
-    const navigate = useNavigate();
-    const location = useLocation();
-
-    const handleCrypto = () => {
-        if (location.pathname === "/cryptos") return; // ⛔ Ya estás ahí
-        navigate("/cryptos");
-    } // ✅ Navega si no estás ahí
-
-    const handleExchange = () => {
-        if (location.pathname === "/exchanges") return; // ⛔ Ya estás ahí
-        navigate("/exchanges");
-    } // ✅ Navega si no estás ahí
-
-
-    const handleInicio = () => {
-        if (location.pathname === "/") return; // ⛔ Ya estás ahí
-        navigate("/");
-    } // ✅ Navega si no estás ahí
-
-
-
-    return(
+export const Nav = () => {
+    return (
         <nav className="flex justify-between items-center px-8 py-5">
-            <h2 className="min-text-l text-xl font-semibold">CryptoLive</h2> 
-            <ul className="flex gap-6 text-gray-300 text-l">
-                <li className="hover:text-white cursor-pointer">
-                    <button onClick={handleInicio}>Inicio</button>
+            <h2 className="min-text-l text-xl font-semibold">CryptoLive</h2>
+            <ul className="flex gap-6 text-l">
+                <li>
+                    <NavLink
+                        to="/"
+                        className={({ isActive }) =>
+                            isActive ? "text-white" : "text-gray-300 hover:text-white transition"
+                        }
+                    >
+                        Inicio
+                    </NavLink>
                 </li>
-                <li className="hover:text-white cursor-pointer">
-                    <button onClick={handleCrypto}>Cryptos</button>
+                <li>
+                    <NavLink
+                        to="/cryptos"
+                        className={({ isActive }) =>
+                            isActive ? "text-white" : "text-gray-300 hover:text-white transition"
+                        }
+                    >
+                        Cryptos
+                    </NavLink>
                 </li>
-                <li className="hover:text-white cursor-pointer">
-                    <button onClick={handleExchange}>Exchanges</button>
+                <li>
+                    <NavLink
+                        to="/exchanges"
+                        className={({ isActive }) =>
+                            isActive ? "text-white" : "text-gray-300 hover:text-white transition"
+                        }
+                    >
+                        Exchanges
+                    </NavLink>
                 </li>
             </ul>
         </nav>
-    )
-
-}
+    );
+};
