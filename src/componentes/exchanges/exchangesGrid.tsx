@@ -21,20 +21,20 @@ export const ExchangeGrid = () => {
 
     const [exchanges, setExchanges] = useState<Exchange[]>([])
 
-    const getExchanges = async () => {
-        try {
-        const res = await fetch(URL)
-        const json = await res.json()
-        setExchanges(json.data)
-        console.log(json)
-        return (json.data)
-        } catch (e) {
-        console.log("error:", e)
-        }
-    }
+    
 
     useEffect(() => {
-        getExchanges() 
+        const getExchanges = async () => {
+        try {
+            const res = await fetch(URL)
+            const json = await res.json()
+            setExchanges(json.data)
+            return (json.data)
+        } catch (e) {
+            console.log("error:", e)
+            }
+        }
+        getExchanges()
     }, [])
 
 
