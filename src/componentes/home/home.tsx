@@ -45,7 +45,7 @@ export const Home = () => {
             </ul>
 
             <Link to="/cryptos">
-                <button className="mt-4 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold text-lg shadow-lg transition-transform">
+                <button className="mt-4 bg-green-500 hover:bg-green-600 hover:cursor-pointer text-white px-6 py-3 rounded-lg font-semibold text-lg shadow-lg transition-transform">
                 explorar criptos
                 </button>
             </Link>
@@ -54,7 +54,7 @@ export const Home = () => {
             <div className="flex justify-center">
             {display && (
                 <img
-                src="crypto-fondo.png"
+                src="crypto-fondo.webp"
                 alt="Criptomonedas y gráficas"
                 className="rounded-xl shadow-2xl max-w-full"
                 />

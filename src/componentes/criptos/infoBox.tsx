@@ -5,7 +5,8 @@ interface InfoProps {
 
 export function InfoBox({ title,children}: InfoProps) {
     return (
-        <div className="bg-gradient-to-br from-[#0a0f2d] to-[#11183d]  p-4 rounded-lg flex flex-col gap-1">
+        <div className="bg-black/20 border border-white/10 rounded-2xl
+                                backdrop-blur-md p-5 shadow-lg shadow-black/20">
             <p className="text-gray-400 text-sm">{title}</p>
             <p className="text-xl font-semibold">{children}</p>
         </div>
