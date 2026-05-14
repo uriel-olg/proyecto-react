@@ -16,8 +16,8 @@ export default function CryptoCard({ id, rank, name, symbol, price, change, pric
 
   return (
     <div className="max-h-screen max-w-screen 
-       bg-black/20 border border-white/10 
-      rounded-lg p-5 shadow-lg 
+       bg-black/20 border border-white/30 
+      rounded-2xl p-5 shadow-lg 
       hover:border-white/20 hover:-translate-y-1 transition-all cursor-pointer hover:shadow-blue-300/20">
 
       {/* Superior */}
