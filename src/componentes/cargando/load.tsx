@@ -1,8 +1,8 @@
 export const Load = () => {
 return (
         
-        <div className="flex flex-col justify-center items-center py-50">
-        <div className="relative w-25 h-25">
+        <div className="flex flex-col justify-center items-center ">
+        <div className="relative w-20 h-20">
 
             {/* Círculo base */}
             <div className="absolute inset-0 rounded-full border-4 border-gray-700"></div>

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { Load } from "../cargando/load";
 import { Nav } from "../nav/nav";
 
@@ -35,22 +34,16 @@ export const ExchangeGrid = () => {
     }, []);
 
     if (!exchanges || exchanges.length === 0) {
-        return <Load />;
+        return   <div className="w-full h-screen flex justify-center items-center">
+                    <Load></Load>
+                </div>
     }
 
     return (
     <>
         <Nav />
 
-        <Link
-            to="/cryptos"
-            className="text-gray-300 hover:text-white transition p-6 inline-block"
-        >
-            ← Volver
-        </Link>
-
-        <div className="min-h-screen pb-10 px-10 
-            grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-8 text-white">
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 p-10 gap-10 mt-10">
 
             {exchanges.map((ex) => (
             <div

@@ -12,7 +12,9 @@ export const Criptos = () =>{
     const {crypto} = useContext(CryptoContext)
 
     if (!crypto || crypto.length === 0) {
-        return <Load />
+        return   <div className="w-full h-screen flex justify-center items-center">
+                    <Load></Load>
+                </div>
     }
 
     return (
